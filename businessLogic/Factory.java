@@ -29,7 +29,7 @@ public class Factory {
 		try {
 			
 			Class.forName("oracle.jdbc.driver.OracleDriver");  
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ABD","abdullah","1234"); 
+			conn = DriverManager.getConnection("connectionstring","username","password"); 
 		}
 		
 		catch(ClassNotFoundException e) {
