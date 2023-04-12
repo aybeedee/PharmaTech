@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane id="welcScreen" fx:id="idToGetStage" prefHeight="673.0" prefWidth="1042.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="businessLogic.PharmacyController">
+   <top>
+ 	<Pane id="welcScreenTop" prefHeight="235.0" prefWidth="1042.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
+               <children>
+            <Rectangle id="headerDesignRect" arcHeight="5.0" arcWidth="5.0" fill="#2e2e2f" height="130.0" layoutX="1.0" layoutY="53.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1042.0" />
+                  <ImageView fitHeight="206.0" fitWidth="191.0" layoutX="26.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Project%20Files/gradient-nurse-logo-collection/main%20logo.png" />
+                     </image>
+                  </ImageView>
+            <Text id="patientHeaderTxt" fill="WHITE" layoutX="359.0" layoutY="138.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="PHARMACIST" />
+               <Button id="backBtn" fx:id="logoutBtn" layoutX="952.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleButtons" text="Logout">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+               </children>
+   	</Pane>
+   </top>
+   <center>
+      <ScrollPane id="scrollPaneStuff" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="medicineFoundDetails" alignment="CENTER" prefHeight="436.0" prefWidth="1039.0">
+               <children>
+                  <Text id="selectRolesTxt" fx:id="receiptCheckout" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="RECEIPT">
+                     <VBox.margin>
+                        <Insets bottom="8.0" top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text id="selectRolesTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sale ID: " />
+                        <Text id="selectRolesRegularTxt" fx:id="checkoutSaleID" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text id="selectRolesTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer: " />
+                        <Text id="selectRolesRegularTxt" fx:id="checkoutCustomerName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text id="selectRolesTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="CNIC: " />
+                        <Text id="selectRolesRegularTxt" fx:id="checkoutCustomerCNIC" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <VBox fx:id="checkoutItemsVBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ITEMS">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                     </children></VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text id="selectRolesTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Total: " />
+                        <Text id="selectRolesRegularTxt" fx:id="checkoutTotal" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text id="selectRolesTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Paid Amount: " />
+                        <Text id="selectRolesRegularTxt" fx:id="checkoutPaidAmount" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text id="selectRolesTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Change: " />
+                        <Text id="selectRolesRegularTxt" fx:id="checkoutChange" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

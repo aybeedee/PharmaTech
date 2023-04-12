@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="673.0" prefWidth="1042.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="businessLogic.PharmacyController">
+   <children>
+      <BorderPane id="welcScreen" fx:id = "idToGetStage" prefHeight="673.0" prefWidth="1042.0" stylesheets="@application.css">
+         <top>
+            <Pane id="welcScreenTop" prefHeight="235.0" prefWidth="1042.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="206.0" fitWidth="191.0" layoutX="426.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Project%20Files/gradient-nurse-logo-collection/main%20logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <VBox id="welcBtnsVBox" prefHeight="438.0" prefWidth="289.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Text id="selectRolesTxt" fill="white" strokeType="OUTSIDE" strokeWidth="0.0" text="Select your role:" textAlignment="CENTER" wrappingWidth="1041.6708984375">
+                     <font>
+                        <Font name="Calibri" size="19.0" />
+                     </font></Text>
+                  <Button id="selectBtn" fx:id="patientBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButtons" prefHeight="48.0" prefWidth="559.0" stylesheets="@application.css" text="Patient" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button id="selectBtn" fx:id="pharmacistBtn" alignment="CENTER" mnemonicParsing="false" onAction="#handleButtons" prefHeight="48.0" prefWidth="559.0" stylesheets="@application.css" text="Pharmacist" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button id="selectBtn" fx:id="physicianBtn" alignment="CENTER" mnemonicParsing="false" onAction="#handleButtons" prefHeight="48.0" prefWidth="559.0" stylesheets="@application.css" text="Physician" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button id="selectBtn" fx:id="managerBtn" alignment="CENTER" mnemonicParsing="false" onAction="#handleButtons" prefHeight="48.0" prefWidth="559.0" stylesheets="@application.css" text="Manager" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></Button>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

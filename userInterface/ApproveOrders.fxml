@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane id="welcScreen" fx:id="idToGetStage" prefHeight="673.0" prefWidth="1042.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="businessLogic.PharmacyController">
+   <top>
+ 	<Pane id="welcScreenTop" prefHeight="235.0" prefWidth="1042.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
+               <children>
+            <Rectangle id="headerDesignRect" arcHeight="5.0" arcWidth="5.0" fill="#2e2e2f" height="130.0" layoutX="1.0" layoutY="53.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1042.0" />
+                  <ImageView fitHeight="206.0" fitWidth="191.0" layoutX="26.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Project%20Files/gradient-nurse-logo-collection/main%20logo.png" />
+                     </image>
+                  </ImageView>
+            <Text id="patientHeaderTxt" fill="WHITE" layoutX="418.0" layoutY="138.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGER" />
+            <Button id="backBtn" fx:id="logoutBtn" layoutX="952.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleButtons" text="Logout">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+               </children>
+   	</Pane>
+   </top>
+   <center>
+      <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="36.0" prefWidth="1042.0">
+               <children>
+                  <Text id="selectRolesTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the required order and click here:  " />
+                  <Button id="backBtn" fx:id="approveOrderTCBtn" alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButtons" text="Approve">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="7.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView id="tableView" fx:id="ordersTableView" prefHeight="373.0" prefWidth="1042.0">
+              <columns>
+                <TableColumn fx:id="orderIDTC" prefWidth="333.0" text="Order ID" />
+                <TableColumn fx:id="orderMedicineNameTC" prefWidth="333.0" text="Name" />
+                <TableColumn fx:id="orderMedicineBrandTC" prefWidth="333.0" text="Brand" />
+                <TableColumn fx:id="orderMedicineQtyTC" prefWidth="333.0" text="Quantity" />
+                <TableColumn fx:id="orderMedicinePriceTC" prefWidth="333.0" text="Unit Price" />
+                <TableColumn fx:id="orderMedicineArrivalDateTC" prefWidth="333.0" text="Arrival Date" />
+                <TableColumn fx:id="orderMedicineExpiryDateTC" prefWidth="333.0" text="Expiry Date" />
+                <TableColumn fx:id="orderApprovalTC" minWidth="0.0" prefWidth="193.0" text="Approval Status" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
